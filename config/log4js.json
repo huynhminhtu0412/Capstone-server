@@ -1,0 +1,19 @@
+{
+    "appenders": [
+        {
+            "type": "dateFile",
+            "filename": "./logs/api-log",
+            "pattern": "-yyyy-MM-dd.log",
+            "alwaysIncludePattern": true
+        },
+        {
+            "type": "console",
+            "layout": {
+                "type": "colored"
+            }
+        }
+    ],
+    "levels": {
+        "[all]": "DEBUG"
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Sample API Service",
+  "version": "1.0.0",
+  "description": "",
+  "title": "Sample API document",
+  "url" : "http://localhost:8765",
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+}

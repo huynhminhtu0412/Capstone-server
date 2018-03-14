@@ -1,0 +1,47 @@
+{
+  "name": "elearning",
+  "version": "1.0.0",
+  "description": "elearning Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm install && sequelize db:migrate && node server.js",
+    "test": "gulp test",
+    "apidoc": "apidoc -e node_modules -e tests -o documents/apidoc -c config/"
+  },
+  "keywords": [
+    "express",
+    "sequelize"
+  ],
+  "author": "IMT-SOFT.COM",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "async": "^1.5.2",
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.4.3",
+    "ldapjs": "^1.0.0",
+    "log4js": "^0.6.38",
+    "md5": "^2.2.1",
+    "morgan": "^1.7.0",
+    "node-uuid": "^1.4.8",
+    "office-to-pdf": "^4.0.0",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.27.0",
+    "sequelize-cli": "^2.4.0",
+    "validator": "^9.4.0",
+    "xlsx": "^0.11.19"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "gulp": "3.9.1",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-mocha": "2.2.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "mochawesome": "1.3.5"
+  },
+  "private": true
+}
