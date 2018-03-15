@@ -7,6 +7,7 @@ var courses_routes = require('./routes/courses');
 var classrooms_routes = require('./routes/classrooms');
 var roles_routes = require('./routes/roles');
 var permissions_routes = require('./routes/permissions');
+var pg = require('pg');
 
 var app = express();
 
@@ -14,14 +15,16 @@ var app = express();
  * Setup Postgres
  */
 
-const { Client } = require('pg');
+var pool = new pg.Pool();
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
+// connection using created pool
+pool.connect(function(err, client, done) {
+  client.query(/* etc, etc */);
+  done('connected to postgres');
 });
 
-client.connect();
+// pool shutdown
+pool.end();
 
 
 /**
