@@ -15,16 +15,14 @@ var app = express();
  * Setup Postgres
  */
 
-var pool = new pg.Pool();
+const { Client } = require('pg');
 
-// connection using created pool
-pool.connect(function(err, client, done) {
-  client.query(/* etc, etc */);
-  done('connected to postgres');
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
 });
 
-// pool shutdown
-pool.end();
+client.connect();
 
 
 
