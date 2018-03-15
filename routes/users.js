@@ -190,7 +190,7 @@ router.delete('/:id', auth_utils.AuthorizeAS, function (req, res) {
  *       "code": "AUTHORIZE_01"
  *     }
  */
-router.get('/', auth_utils.AuthorizeAS, function (req, res) {
+router.get('/', function (req, res) {
   var currentPage = req.query.current_page;
   var pageSize = req.query.page_size;
   userService.GetUsers(currentPage, pageSize, function (error, users) {
