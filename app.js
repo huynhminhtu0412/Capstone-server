@@ -11,6 +11,20 @@ var permissions_routes = require('./routes/permissions');
 var app = express();
 
 /**
+ * Setup Postgres
+ */
+
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
+
+
+/**
  * Enable CORS for all routes
  */
 app.use(cors());
