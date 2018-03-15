@@ -117,6 +117,7 @@ router.post('/register', auth_utils.AuthorizeAS, function (req, res) {
   userService.CreateUser(username, full_name, password, email, role_id, function (error, result) {
     if (error) {
       utils.ResponseWithToken(req, res, utils.ResultServiceError(error));
+      console.log(error);
     }
     else {
       utils.ResponseWithToken(req, res, result);
