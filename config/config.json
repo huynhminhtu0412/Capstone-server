@@ -18,6 +18,7 @@
     "password": null
   },
   "production": {
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
     "charset": "utf8",
     "underscored": true,
